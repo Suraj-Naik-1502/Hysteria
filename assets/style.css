@@ -133,24 +133,34 @@ nav img:hover {
 #page2{
     min-height: 100vh;
     width: 100%;
-    /* background-color: orange; */
-    padding: 3vw 0vw;
+    background-color: #EFEAE3;
+    padding: 1vw 0vw;
     
 }
 
 #moving-text{
     white-space: nowrap;
+    overflow: hidden;
+}
+
+#moving-text::-webkit-scrollbar{
+    display: none;
 }
 
 #con{
     white-space: nowrap ;
     display: inline-block;
+    animation-name: move;
+    animation-duration: 15s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
 }
 
 #moving-text h1{
     font-size: 9vw;
     /* background-color: aqua; */
     display: inline-block;
+    font-family: 'Times New Roman';
 }
 
 .gola{
@@ -158,7 +168,15 @@ nav img:hover {
     width: 50px;
     border-radius: 50%;
     display: inline-block;
-    background-color: rgba(194, 51, 194, 0.603);
+    background-color: rgba(141, 34, 141, 0.767);
     margin: 1vw 2vw;
 }
 
+@keyframes move{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}

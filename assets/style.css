@@ -9,6 +9,7 @@ html,
 body {
     height: 100%;
     width: 100%;
+    background-color: #EFEAE3;
 }
 
 #page1 {
@@ -130,25 +131,25 @@ nav img:hover {
     background-image: url('path/to/prev-button.png');
 }
 
-#page2{
-    min-height: 100vh;
+#page2 {
+    min-height: 30vh;
     width: 100%;
     background-color: #EFEAE3;
     padding: 1vw 0vw;
-    
+
 }
 
-#moving-text{
+#moving-text {
     white-space: nowrap;
     overflow: hidden;
 }
 
-#moving-text::-webkit-scrollbar{
+#moving-text::-webkit-scrollbar {
     display: none;
 }
 
-#con{
-    white-space: nowrap ;
+#con {
+    white-space: nowrap;
     display: inline-block;
     animation-name: move;
     animation-duration: 15s;
@@ -156,14 +157,14 @@ nav img:hover {
     animation-iteration-count: infinite;
 }
 
-#moving-text h1{
+#moving-text h1 {
     font-size: 9vw;
     /* background-color: aqua; */
     display: inline-block;
     font-family: 'Times New Roman';
 }
 
-.gola{
+.gola {
     height: 50px;
     width: 50px;
     border-radius: 50%;
@@ -172,11 +173,66 @@ nav img:hover {
     margin: 1vw 2vw;
 }
 
-@keyframes move{
-    from{
+@keyframes move {
+    from {
         transform: translateX(0);
     }
-    to{
+
+    to {
         transform: translateX(-100%);
     }
+}
+
+.container {
+    width: 100%;
+    margin: 0;
+    padding: 10px 100px 30px 100px;
+    overflow: hidden;
+    background-color: #EFEAE3;
+}
+
+.about-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.about-text {
+    flex: 1;
+    padding-right: 50px;
+}
+
+.about-text h2 {
+    color: #333;
+}
+
+.about-text p {
+    font-size: 1.1em;
+    color: #666;
+}
+
+.about-image {
+    flex: 1;
+    overflow: hidden;
+    /* border: 2px solid red; */
+    height: 50vh;
+}
+
+.about-image img {
+    width: 95%;
+    height: 45vh;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+.about-image img:hover{
+    height: 50vh;
+    width: 100%;
+    object-fit:fill;
+    padding-top: 0px;
+    padding-left: 0px;
+    transition: all ease 0.4s;
 }
